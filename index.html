@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container{
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(230, 224, 216);
+      background-image: linear-gradient(160deg, #dae2e6 0%, #464963 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .card{
+        width: 1000px;
+        height:500px;
+        background-color: #fdf1b8e3;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    
+    }
+
+
+    .card:hover::before {
+        left: 0%; /* Move the overlay to the right edge of the card */
+    }
+
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+        transition: left 5s ease; /* Add transition for smooth animation */
+    }
+
+    .textBox{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        color: black
+    }
+
+    .imgBox{
+        width: 50%;
+        height: 100%;
+        background-color: white;
+       
+        background-size:contain; /* Adjust as needed */
+        background-position: center; /* Adjust as needed */
+    }
+
+    #contentBox{
+        width: 75%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+    }
+
+    h1{
+        font-size: 2.4rem;
+    }
+
+    #descBox p{
+        font-size: 1rem;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: justify;
+    }
+
+    #statsBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #number{
+        font-size: 1.3rem;
+        font-weight: bold;
+        
+    }
+
+    #unit{
+        font-size:smaller;
+    }
+    
+
+    </style>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="card">
+
+                <div class="textBox">
+
+                    <div id="contentBox">
+                        <h1 id="textHeading">
+                           Bodhi's Photography, Capture Every Beauty!
+                        </h1>
+
+                        <div id="descBox">
+                            <p>Photography is the art of freezing time,
+                                capturing moments that would otherwise slip away
+                                unnoticed. It’s a silent poem where light and
+                                shadow dance to tell a story, revealing emotions
+                                words often fail to express. Through the lens, a
+                                photographer finds beauty in chaos, stillness in
+                                motion, and magic in the mundane. Every click of
+                                the shutter is like a heartbeat, breathing life
+                                into memories that linger long after the moment
+                                has passed, turning fleeting seconds into
+                                timeless treasures.
+
+                            </p>
+                        </div>
+
+                        <div id="statsBox">
+                            <div>
+                                <div id="number">
+                                    10K+
+                                </div>
+                                <div id="unit">
+                                    Comments
+                                </div>
+                            </div>
+
+                            <div>
+                                <div id="number">
+                                    214
+                                </div>
+                                <div id="unit">
+                                    Paid Users
+                                </div>
+                            </div>
+
+                            <div>
+                                <div id="number">
+                                    12M+
+                                </div>
+                                <div id="unit">
+                                    Views
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="imgBox">
+                    <img src="camera.jpg" height="500px" width="608px" alt>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
